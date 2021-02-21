@@ -1,0 +1,18 @@
+<label for="hours">HoursFormat:</label>
+<select name="format" id="hoursformat" (change)="onChange($event.target.value)" >
+    <option value="12" selected>12</option>
+    <option value="24">24</option>
+    
+  </select>
+  <br><br>
+
+<ag-grid-angular
+    style="width: 700px; height: 500px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [pagination]="true"
+*ngIf="showgrid"
+id="agGrid"
+>
+</ag-grid-angular>
